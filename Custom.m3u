@@ -1,0 +1,5 @@
+#EXTM3U url-tvg="https://iptvx.one/epg/epg.xml.gz"
+#PLAYLIST:Custom
+
+#EXTINF:-1 tvg-id="yu" group-title="Развлекательные", Ю HD
+https://cdn-01.bonus-tv.ru/u/playlist.m3u8
