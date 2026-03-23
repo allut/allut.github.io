@@ -19,7 +19,7 @@
 			padding: 0;
 		}
 		h1 {
-			font-size: 350%;
+			font-size: 250%;
 		}
 		h2 {
 			font-size: 190%;
@@ -51,6 +51,9 @@
 		}
 		.clear {
 			clear: both;
+		}
+		.justified-element {
+			text-align: justify
 		}
 
 		#main {
@@ -136,7 +139,7 @@
 			text-align: right;
 		}
 		.section-education .school,
-		.section-work .job_title {
+		.experience .job_title {
 			font-size: 100%;
 			display: block;
 			margin: 5px 0 5px 0;
@@ -190,132 +193,217 @@
 			<h1 id="title">Aleksei Lutkov</h1>
 			<div class="basic-info section">
 				<div class="set">
-					<p class="email">
-						E-mail: <a href = "mailto: aleksei.lutkov@gmail.com<">aleksei.lutkov@gmail.com</a><br>
-						Phone: +372 58586410<br>
-						Links: <a href="https://www.linkedin.com/in/allut/" rel="nofollow" target="_blank">LinkedIn</a>
+					<p class="location">
+						Tallinn, Estonia
 					</p>
-					<p class="address">
-						Location: Tallinn, Estonia
-					</p>
-					<p class="date-of-birth">
-						Date of birth: 04.09.1996
+					<p class="job-title">
+						Python Backend / Platform Engineer | Team Lead
+					</p><br>
+					<p class="links">
+						Email: <a href = "mailto: aleksei.lutkov@gmail.com">aleksei.lutkov@gmail.com</a><br>
+						LinkedIn: <a href="https://www.linkedin.com/in/allut/" rel="nofollow" target="_blank">https://www.linkedin.com/in/allut/</a>
 					</p>
 					<div class="clear"> </div>
-				</div><!-- set //-->
+				</div>
 				<div class="clear"> </div>
-			</div><!-- basic-info //-->
+			</div>
 		</div><div class="clear"> </div>
 
-		<div class="section section-profile">
-			<h2 class="title">Profile</h2>
+		<div class="section section-summary">
+			<h2 class="title">Summary</h2>
+				<div class="set">
+					<p class="justified-element">Python Software Engineer with strong experience in backend development, platform operations, and infrastructure. Currently working as a Team Lead Platform Operations at Relax Gaming.</p>
+					<p class="justified-element">Focused on improving system reliability, simplifying deployment processes, and reducing operational complexity in production systems. Experienced in working with distributed systems, deployment processes, and B2B integrations. Interested in backend, platform engineering, and management roles where I can deliver business impact and improve system reliability.</p>
+				</div>
+			<div class="clear"> </div>
+		</div>
+
+		<div class="section section-skills">
+			<h2 class="title">Core Skills</h2>
 			<div class="set">
 				<div class="item">
-					<span class="info">Experienced Software Engineer with more than four years of experience and a demonstrated history of working in the Information Technology and Services industry. Proficient in Software Development in Python programming language and Continuous Integration and Delivery.</span>
+					<div class="info">
+						<p><b>Backend</b></p>
+						<p>
+							&bull; Python (FastAPI, aiohttp, Django, Flask)<br>
+							&bull; Backend development & API design
+						</p>
+						<p><b>Infrastructure</b></p>
+						<p>
+							&bull; CI/CD (Jenkins, Ansible, pipelines)<br>
+							&bull; Docker & containerization
+						</p>
+						<p><b>Other</b></p>
+						<p>
+							&bull; Troubleshooting production systems<br>
+							&bull; Integrations & automation<br>
+							&bull; Operations & process management<br>
+							&bull; Team leadership & mentoring
+						</p>
+					</div>
 				</div>
 			</div>
 			<div class="clear"> </div>
 		</div>
 
-		<div class="section section-work">
-			<h2 class="title">Work experience</h2>
+		<div class="section experience">
+			<h2 class="title">Experience</h2>
 			<div class="set">
 
-
 				<div class="item">
-					<h3><span class="company l">Relax Gaming Ltd</span></h3>
+					<h3><span class="role l">Team Lead Platform Operations</span></h3>
 					<h4><span class="date r">Jan 2025 &mdash; Present</span></h4>
 					
 					<div class="clear"> </div>
-					<div class="info"><h4><span><span>Team Lead Platform Operations</span></span></h4></div><div class="clear"> </div>
-					<div class="info"><span><span>
-						&bull; Plan, organize, direct, control and evaluate the work of the Relax Gaming Platform Operations team<br>
-						&bull; Develop and implement policies and procedures for the effective work of the Relax Gaming Platform Operations team<br>
-						&bull; Assemble and manage the Relax Gaming Platform team to perform Platform Operations routine tasks (configuration changes, casino integrations, game deployments)<br>
-						&bull; Recruit and supervise Software Engineers and oversee their professional development and training in the Relax Gaming Platform Operations team<br>
-						&bull; Participate in the Relax Gaming Platform Operations team's general tasks and activities
-					</span></span></div><span class="clear"> </span>
+					<div class="info"><h4>Relax Gaming Ltd</h4></div><div class="clear"> </div>
+					<div class="info">
+						<div class="justified-element">
+							&bull; Led Platform Operations team responsible for game deployments and releases, casino & Platform-to-Platform integrations, and configuration changes, improving reliability of operational tasks and processes<br>
+							&bull; Supervised and oversaw professional development and training of Software Engineers in the Platform Operations team, enhancing team capability, technical expertise, and ownership of platform operations<br>
+							&bull; Streamlined operational processes and reduced complexity, making them more structured, predictable, and easier to maintain<br>
+							&bull; Developed backend services in Python for distributed systems, supporting platform operations and business-critical workflows<br>
+							&bull; Improved and maintained CI/CD pipelines, reducing manual work and increasing deployment stability<br>
+							&bull; Investigated and resolved production issues, improving system reliability and reducing downtime in production environments
+						</div>
+					</div><span class="clear"> </span>
 				</div>
 
 				<div class="item">
-					<h3><span class="company l">Relax Gaming Ltd</span></h3>
+					<h3><span class="role l">Software Engineer</span></h3>
 					<h4><span class="date r">Apr 2021 &mdash; Jan 2025</span></h4>
 					
 					<div class="clear"> </div>
-					<div class="info"><h4><span><span>Software Engineer</span></span></h4></div><div class="clear"> </div>
-					<div class="info"><span><span>
-						&bull; Research, evaluate and synthesize technical information to design, develop and test software<br>
-						&bull; Plan, design and coordinate software development, integration, deployment and operation<br>
-						&bull; Troubleshoot and resolve software development, integration, deployment and operation issues<br>
-						&bull; Configure and manage CI/CD pipelines and automations<br>
-						&bull; Perform Platform Operations routine tasks (configuration changes, casino integrations, game deployments)<br>
-						&bull; Curate, consult and test Platform-to-Platform integrations<br>
-						&bull; Troubleshoot and resolve complex issues of Relax Gaming group's partners<br>
-						&bull; Advise and assist junior developers and engineers
-					</span></span></div><span class="clear"> </span>
+					<div class="info"><h4>Relax Gaming Ltd</h4></div><div class="clear"> </div>
+					<div class="info">
+						<div class="justified-element">
+							&bull; Developed backend services in Python for distributed systems, supporting platform operations and business-critical workflows<br>
+							&bull; Improved and maintained CI/CD pipelines, reducing manual work and increasing deployment stability<br>
+							&bull; Performed casino integrations, configuration changes, and other operational tasks, ensuring stable and reliable platform operations<br>
+							&bull; Managed game deployments and releases, supporting business-critical game release workflows<br>
+							&bull; Curated, consulted, and tested Platform-to-Platform integrations, facilitating business expansion<br>
+							&bull; Investigated and resolved production issues, improving system reliability and reducing downtime in production environments<br>
+							&bull; Mentored junior engineers, increasing team knowledge and accelerating the onboarding process
+						</div>
+					</div><span class="clear"> </span>
 				</div>
 
 				<div class="item">
-					<h3><span class="company l">Relax Gaming Ltd</span></h3>
+					<h3><span class="role l">Head of Partner Support Engineering</span></h3>
 					<h4><span class="date r">Feb 2021 &mdash; Apr 2021</span></h4>
 					
 					<div class="clear"> </div>
-					<div class="info"><span><span><h4>Head of Partner Support Engineering</h4></span></span></div><div class="clear"> </div>
-					<div class="info"><span><span>
-						&bull; Manage and lead the Partner Support Engineering team<br>
-						&bull; Maintain 24/7 Network Operations Centre<br>
-						&bull; Participate in the team's general tasks and activities<br>
-						&bull; Develop and improve support processes, documentation, and training materials<br>
-						&bull; Handle new team members' mentoring and onboarding<br>
-						&bull; Conduct team members' training and regular assessments
-					</span></span></div><span class="clear"> </span>
+					<div class="info"><h4>Relax Gaming Ltd</h4></div><div class="clear"> </div>
+					<div class="info">
+						<div class="justified-element">
+							&bull; Led Partner Support Engineering team responsible for troubleshooting and resolving issues of Relax Gaming group's partners, improving support processes and supporting business-critical workflows<br>
+							&bull; Supervised and oversaw professional development and training of Partner Support Engineering team members, enhancing team capability, technical expertise, and support quality<br>
+							&bull; Ensured stable 24/7 Network Operations Center, enhancing monitoring and response processes<br>
+							&bull; Strengthened collaboration between internal teams and external partners, reducing communication gaps<br>
+							&bull; Improved support processes, making them more structured and efficient
+						</div>
+					</div><span class="clear"> </span>
 				</div>
 
 				<div class="item">
-					<h3><span class="company l">Relax Gaming Ltd</span></h3>
+					<h3><span class="role l">Partner Support Engineer</span></h3>
 					<h4><span class="date r">Sep 2020 &mdash; Feb 2021</span></h4>
 
 					<div class="clear"> </div>
-					<div class="info"><span><span><h4>Partner Support Engineer</h4></span></span></div><div class="clear"> </div>
-					<div class="info"><span><span>
-						&bull; Troubleshoot and resolve issues of Relax Gaming group's partners<br>
-						&bull; Work with internal tools for managing and configuring the Relax Gaming platform<br>
-						&bull; Ensure liaison between internal teams and external partners<br>
-						&bull; Participate in Network Operations Centre routine tasks<br>
-						&bull; Participate in continuous development and improvement of support processes
-					</span></span></div><span class="clear"> </span>
+					<div class="info"><h4>Relax Gaming Ltd</h4></div><div class="clear"> </div>
+					<div class="info">
+						<div class="justified-element">
+							&bull; Troubleshot and resolved issues of Relax Gaming group's partners, ensuring system stability and customer satisfaction<br>
+							&bull; Coordinated between internal teams and external partners to resolve issues of Relax Gaming group's partners<br>
+							&bull; Used internal platform tools, managing the Relax Gaming platform to support platform operations<br>
+							&bull; Participated in the Network Operations Center work, ensuring system availability<br>
+							&bull; Contributed to improvements in support processes
+						</div>
+					</div><span class="clear"> </span>
 				</div>
 
 				<div class="item">
-					<h3><span class="company l">Transcom Eesti OÜ</span></h3>
-					<h4><span class="date r">Jan 2020 &mdash; Jul 2020</span></h4>
+					<h3><span class="role l" style="margin: 0 0 10px 0">Earlier Experience</span></h3>
+					<h4><span class="date r">Jul 2018 &mdash; Sep 2020</span></h4>
 					
 					<div class="clear"> </div>
-					<div class="info"><span><span><h4>Senior Customer Service Representative</h4></span></span></div><div class="clear"> </div>
-					<div class="info"><span><span>
-						&bull; Deliver in-depth customer service for Personal Computers & Smart Devices<br>
-						&bull; Provide advanced technical support with complex issues<br>
-						&bull; Collaborate with various departments and third-parties to resolve complicated cases<br>
-						&bull; Advise and assist junior customer service representatives
-					</span></span></div><span class="clear"> </span>
+					<div class="info">
+						&bull; Conscript service at <b>Headquarters and Signal Battalion</b><br>
+						&bull; (Senior) Customer Service Representative at <b>Transcom Eesti OÜ</b>
+					</div><span class="clear"> </span>
+				</div>
+
+			</div>
+			<div class="clear"> </div>
+		</div>
+
+		<div class="section section-projects">
+			<h2 class="title">Selected Projects / Impact</h2>
+			<div class="set">
+
+				<div class="item">
+					<h3><span class="area">Backend Development</span></h3>
+
+					<div class="clear"> </div>
+					<div class="info"><h4>Building and maintaining backend systems</h4></div><div class="clear"> </div>
+					<div class="info">
+						<div class="justified-element">
+							&bull; <b>Problem:</b> Need to integrate multiple internal and external systems with different APIs, data formats, and architecture<br>
+							&bull; <b>Action:</b> Designed and developed backend services in Python, providing inter-system communication, complex data processing, and support for business-critical processes<br>
+							&bull; <b>Result:</b> Stable and scalable backend systems enabling reliable operation and reducing operational issues
+						</div>
+					</div><span class="clear"> </span>
 				</div>
 
 				<div class="item">
-					<h3><span class="company l">Transcom Eesti OÜ</span></h3>
-					<h4><span class="date r">Aug 2019 &mdash; Jan 2020</span></h4>
-					
+					<h3><span class="area">CI/CD</span></h3>
+
 					<div class="clear"> </div>
-					<div class="info"><span><span><h4>Customer Service Representative</h4></span></span></div><div class="clear"> </div>
-					<div class="info"><span><span>&bull; Deliver in-depth customer service for Smart Devices</span></span></div><span class="clear"> </span>
+					<div class="info"><h4>Improving deployment reliability</h4></div><div class="clear"> </div>
+					<div class="info">
+						<div class="justified-element">
+							&bull; <b>Problem:</b> Deployment process for a key frontend system was ineffective and required manual intervention<br>
+							&bull; <b>Action:</b> Improved CI/CD pipelines, automated key steps, and reduced manual operations<br>
+							&bull; <b>Result:</b> Faster deployment process with fewer failures, faster testing, and more stable releases
+						</div>
+					</div><span class="clear"> </span>
 				</div>
 
 				<div class="item">
-					<h3><span class="company l">Estonian Defense Forces</span></h3>
-					<h4><span class="date r">Jul 2018 &mdash; Jun 2019</span></h4>
-					
+					<h3><span class="area">Platform Operations</span></h3>
+
 					<div class="clear"> </div>
-					<div class="info"><span><span><h4>Conscript</h4></span></span></div><div class="clear"> </div>
-					<div class="info"><span><span>&bull; Conscript service at Headquarters and Signal Battalion</span></span></div><span class="clear"> </span>
+					<div class="info"><h4>Managing Platform Operations</h4></div><div class="clear"> </div>
+					<div class="info">
+						<div class="justified-element">
+							&bull; <b>Problem:</b> Need for better structured, defined, and automated operational tasks and processes, and segregation of responsibilities<br>
+							&bull; <b>Action:</b> Revised operational tasks, improved processes, rewrote and enriched documentation, and limited the area of responsibility<br>
+							&bull; <b>Result:</b> Well-defined and documented operational tasks and processes; several fully automated tasks; several delegated areas
+						</div>
+					</div><span class="clear"> </span>
+				</div>
+
+				<div class="item">
+					<h3><span class="area">P2P Integrations</span></h3>
+
+					<div class="clear"> </div>
+					<div class="info"><h4>Improving Platform-to-Platform integration process</h4></div><div class="clear"> </div>
+					<div class="info">
+						&bull; <b>Problem:</b> Lack of clarity in the tech details of the Platform-to-Platform integration process and internal documentation<br>
+						&bull; <b>Action:</b> Rewrote and enriched internal documentation, added step-by-step instructions, and created a comprehensive list with all the integration items, their specifics, and applicable scope<br>
+						&bull; <b>Result:</b> More streamlined Platform-to-Platform integration process, fewer delays, and faster integration times
+					</div><span class="clear"> </span>
+				</div>
+
+				<div class="item">
+					<h3><span class="area">Leadership</span></h3>
+
+					<div class="clear"> </div>
+					<div class="info"><h4>Leading Platform Operations team</h4></div><div class="clear"> </div>
+					<div class="info">
+						&bull; <b>Problem:</b> Lack of visibility, continuous communication cycles, and clear development directions within the team<br>
+						&bull; <b>Action:</b> Led the team, established continuous communication cycles, and defined development plans for team members<br>
+						&bull; <b>Result:</b> Open and honest atmosphere, improved team efficiency, and clear development directions for each team member
+					</div><span class="clear"> </span>
 				</div>
 
 			</div>
@@ -326,30 +414,33 @@
 			<h2 class="title">Education</h2>
 			<div class="set">
 				<div class="item">
-					<h3><span class="course l">Tallinn University of Technology</span></h3>
+					<h3><span class="education l">Bachelor's degree, Informatics</span></h3>
 					<h4><span class="date r">2024 &mdash; 2025</span></h4>
 					
 					<div class="clear"> </div>
-					<div class="info"><h4><span><span>Bachelor's degree, Informatics</span></span></h4></div><span class="clear"> </span>
-					<div class="info"><span><span>&bull; <a href="https://digikogu.taltech.ee/en/Download/bf3a9eb3-bd06-40d9-ba47-0b4a0e527f3c" rel="nofollow" target="_blank">Integration and Optimization of Computer Vision Models for Fish Species, Size, and Behavior Classification in the Smart Fish Counter Application</a>, supervised by Jeffrey Andrew Tuhtan</span></span></div><span class="clear"> </span>
+					<div class="info"><h4>Tallinn University of Technology</h4></div><span class="clear"> </span>
+					<div class="info">
+						<p><a href="https://digikogu.taltech.ee/en/Download/bf3a9eb3-bd06-40d9-ba47-0b4a0e527f3c" rel="nofollow" target="_blank">Integration and Optimization of Computer Vision Models for Fish Species,<br>Size, and Behavior Classification in the Smart Fish Counter Application</a></p>
+						<p>Supervised by Jeffrey Andrew Tuhtan</p>
+					</div><span class="clear"> </span>
 				</div>
 
 				<div class="item">
-					<h3><span class="course l">Tallinn University of Technology</span></h3>
+					<h3><span class="education l">Bachelor's degree, Informatics</span></h3>
 					<h4><span class="date r">2015 &mdash; 2018</span></h4>
 					
 					<div class="clear"> </div>
-					<div class="info"><h4><span><span>Bachelor's degree, Informatics</span></span></h4></div><span class="clear"> </span>
-					<div class="info"><span><span>&bull; Unfinished</span></span></div><span class="clear"> </span>
+					<div class="info"><h4>Tallinn University of Technology</h4></div><span class="clear"> </span>
+					<div class="info">Unfinished</div><span class="clear"> </span>
 				</div>
 
 				<div class="item">
-					<h3><span class="course l">Sillamäe Gümnaasium</span></h3>
+					<h3><span class="education l">General secondary education</span></h3>
 					<h4><span class="date r">2012 &mdash; 2015</span></h4>
 					
 					<div class="clear"> </div>
-					<div class="info"><h4><span><span>General secondary education</span></span></h4></div><span class="clear"> </span>
-					<div class="info"><span><span>&bull; Graduated with a gold medal</span></span></div><span class="clear"> </span>
+					<div class="info"><h4>Sillamäe Gümnaasium</h4></div><span class="clear"> </span>
+					<div class="info">Graduated with a gold medal</div><span class="clear"> </span>
 				</div>
 			</div>
 			<div class="clear"> </div>
@@ -364,7 +455,7 @@
 						<span class="date r">Feb 2024</span>
 					</h4>
 					<div class="clear"> </div>
-					<div id="description"><span><span><a href="https://courses.ibmdeveloper.skillsnetwork.site/certificates/0e3f982948ad4c2c8e760a6c1c46f2dd" rel="nofollow" target="_blank">IBM</a></span></span></div><span class="clear"> </span>
+					<div id="description"><a href="https://courses.ibmdeveloper.skillsnetwork.site/certificates/0e3f982948ad4c2c8e760a6c1c46f2dd" rel="nofollow" target="_blank">IBM</a></div><span class="clear"> </span>
 				</div>
 
 				<div class="item">
@@ -372,7 +463,7 @@
 						<span class="date r">Jan 2024</span>
 					</h4>
 					<div class="clear"> </div>
-					<div id="description"><span><span><a href="https://courses.ibmdeveloper.skillsnetwork.site/certificates/05e82eefe97d45bda8a6a3f5a14470b9" rel="nofollow" target="_blank">IBM</a></span></span></div><span class="clear"> </span>
+					<div id="description"><a href="https://courses.ibmdeveloper.skillsnetwork.site/certificates/05e82eefe97d45bda8a6a3f5a14470b9" rel="nofollow" target="_blank">IBM</a></div><span class="clear"> </span>
 				</div>
 
 				<div class="item">
@@ -380,7 +471,7 @@
 						<span class="date r">Jan 2024</span>
 					</h4>
 					<div class="clear"> </div>
-					<div id="description"><span><span><a href="https://courses.ibmdeveloper.skillsnetwork.site/certificates/3961e0ef3847401a911e89838a05d11e" rel="nofollow" target="_blank">IBM</a></span></span></div><span class="clear"> </span>
+					<div id="description"><a href="https://courses.ibmdeveloper.skillsnetwork.site/certificates/3961e0ef3847401a911e89838a05d11e" rel="nofollow" target="_blank">IBM</a></div><span class="clear"> </span>
 				</div>
 
 				<div class="item">
@@ -388,68 +479,32 @@
 						<span class="date r">Jun 2023</span>
 					</h4>
 					<div class="clear"> </div>
-					<div id="description"><span><span><a href="https://courses.cognitiveclass.ai/certificates/fe635a13187d4ce8bf2c22aa7ee0bad1" rel="nofollow" target="_blank">IBM</a></span></span></div><span class="clear"> </span>
-				</div>
-
-				<div class="item">
-					<h4><span class="course l">Deep Learning Specialization</span>
-						<span class="date r">Mar 2020</span>
-					</h4>
-					<div class="clear"> </div>
-					<div id="description"><span><span><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/VK592S4A3M96" rel="nofollow" target="_blank">Coursera</a></span></span></div><span class="clear"> </span>
+					<div id="description"><a href="https://courses.cognitiveclass.ai/certificates/fe635a13187d4ce8bf2c22aa7ee0bad1" rel="nofollow" target="_blank">IBM</a></div><span class="clear"> </span>
 				</div>
 
 			</div>
 			<div class="clear"> </div>
 		</div>
 
-		<div class="section section-Languages">
+		<div class="section section-languages" style="margin: 0">
 			<h2 class="title">Languages</h2>
 			<div class="set">
 				<div class="item">
-					<h4><span class="course l">English</span></h4>
+					<h4><span class="language l">English</span></h4>
 					<div class="clear"> </div>
-					<div id="description"><span><span>Professional working proficiency</span></span></div><span class="clear"> </span>
+					<div id="description">Professional working proficiency</div><span class="clear"> </span>
 				</div>
 
 				<div class="item">
-					<h4><span class="course l">Estonian</span></h4>
+					<h4><span class="language l">Estonian</span></h4>
 					<div class="clear"> </div>
-					<div id="description"><span><span>Professional working proficiency</span></span></div><span class="clear"> </span>
+					<div id="description">Professional working proficiency</div><span class="clear"> </span>
 				</div>
 
-				<div class="item">
-					<h4><span class="course l">Russian</span></h4>
+				<div class="item" style="margin: 0">
+					<h4><span class="language l">Russian</span></h4>
 					<div class="clear"> </div>
-					<div id="description"><span><span>Native proficiency</span></span></div><span class="clear"> </span>
-				</div>
-			</div>
-			<div class="clear"> </div>
-		</div>
-
-		<div class="section section-personal-qualities">
-			<h2 class="title">Personal qualities</h2>
-			<div class="set">
-				<div class="item">
-					<h4><span class="course l">Strengths</span></h4>
-					<div class="clear"> </div>
-					<div id="description"><span><span>Adaptable, Versatile, Flexible, Receptive to training, Detail-oriented</span></span></div><span class="clear"> </span>
-				</div>
-
-				<div class="item">
-					<h4><span class="course l">Weaknesses</span></h4>
-					<div class="clear"> </div>
-					<div id="description"><span><span>Uncomfortable with public speaking</span></span></div><span class="clear"> </span>
-				</div>
-			</div>
-			<div class="clear"> </div>
-		</div>
-
-		<div class="section section-skills">
-			<h2 class="title">Skills</h2>
-			<div class="set">
-				<div class="item">
-					<span class="info"><span><span>Team Management, Operations Management, Software Development, Python Programming Language, FastAPI, aiohttp, Django, Flask, Continuous Integration and Continuous Delivery (CI/CD), Software Deployment, DevOps, Docker, Ansible, Jenkins, Shell Scripting, MySQL, Linux, Version Control Tools, Jira Service Desk</span></span></span>
+					<div id="description">Native proficiency</div><span class="clear"> </span>
 				</div>
 			</div>
 			<div class="clear"> </div>
