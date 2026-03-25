@@ -246,6 +246,10 @@ img {
   line-height: 1.25;
 }
 
+.offer-card .entry-title {
+  margin-bottom: 8px;
+}
+
 .entry-date {
   white-space: nowrap;
   color: var(--muted);
@@ -366,9 +370,44 @@ img {
   display: inline;
 }
 
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.offer-card {
+  height: 100%;
+}
+
+.offer-card ul {
+  margin-top: 12px;
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.compact-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.cta-card p {
+  margin: 0 0 16px;
+}
+
 @media (min-width: 900px) {
   .thesis-break {
     display: block;
+  }
+  .offers-grid,
+  .problem-grid,
+  .compact-steps {
+    grid-template-columns: 1fr;
   }
 }
 
