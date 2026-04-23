@@ -354,7 +354,7 @@ img {
 }
 
 .thesis-link {
-  display: inline-block;
+  display: inline;
   margin-top: 8px;
   font-weight: 600;
 }
