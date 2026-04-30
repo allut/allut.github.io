@@ -4,214 +4,201 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aleksei Lutkov | Practical Python Services</title>
-  <meta
-    name="description"
-    content="Python backend, automation, integrations, CI/CD, Docker, and deployment support by Aleksei Lutkov."
-  />
+  <meta name="description" content="Python backend, automation, integrations, CI/CD, Docker, and deployment support by Aleksei Lutkov." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="theme.js"></script>
 </head>
 <body>
-  <main class="page">
-    <header class="hero">
-      <div class="hero-photo">
-        <img src="portrait.jpg" alt="Portrait of Aleksei Lutkov" />
+
+  <nav class="site-nav">
+    <div class="site-nav__inner">
+      <span class="site-nav__brand">allut.github.io</span>
+      <div class="site-nav__links">
+        <a class="site-nav__link" href="index.html">Home</a>
+        <a class="site-nav__link" href="cv.html">Profile</a>
+        <a class="site-nav__link" href="claude-anvil.html">claude-anvil</a>
+        <button class="theme-toggle" aria-label="Switch to light theme">
+          <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
       </div>
-
-      <div class="hero-content">
-        <h1>Aleksei Lutkov</h1>
-        <p class="hero-subtitle">Practical Python Services</p>
-
-        <ul class="hero-meta">
-          <li>Python Backend</li>
-          <li>Automation</li>
-          <li>Integrations</li>
-          <li>CI/CD</li>
-          <li>Docker</li>
-          <li>Deployment Reliability</li>
-        </ul>
-
-        <div class="hero-links">
-          <a class="hero-link" href="mailto:aleksei.lutkov@gmail.com">aleksei.lutkov@gmail.com</a>
-          <a
-            class="hero-link"
-            href="https://www.linkedin.com/in/allut/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-          <a
-            class="hero-link"
-            href="https://allut.github.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            About Me
-          </a>
-        </div>
-      </div>
-    </header>
-
-    <div class="stack">
-      <section class="card summary">
-        <h2 class="section-title">About</h2>
-        <p>
-          Hi, I'm Aleksei — Python Backend / Platform Engineer. I help businesses and small teams build practical backend solutions, automate workflows, connect systems, and improve operational reliability.
-          My main focus is Python backend development, internal tools, API integrations, and deployment-related improvements that reduce manual work and make systems easier to operate and maintain.
-        </p>
-      </section>
-
-      <section class="card">
-        <h2 class="section-title">Main Services</h2>
-
-        <div class="offers-grid">
-          <article class="entry offer-card">
-            <h3 class="entry-title">Automation / Internal Tools / Backend Integrations</h3>
-            <p class="entry-subtitle">
-              For businesses and teams that need practical Python solutions to reduce manual work, support internal workflows, and connect systems.
-            </p>
-
-            <ul>
-              <li>Python backend development (FastAPI, Django, Flask)</li>
-              <li>Internal admin tools and small utility systems</li>
-              <li>Workflow automation for repetitive operational tasks</li>
-              <li>API integrations between services and internal systems</li>
-              <li>Data processing and synchronization</li>
-              <li>Telegram bots and notification workflows</li>
-            </ul>
-          </article>
-
-          <article class="entry offer-card">
-            <h3 class="entry-title">CI/CD / Docker / Deployment Support</h3>
-            <p class="entry-subtitle">
-              For teams that need more reliable deployments, cleaner release workflows, and less manual operational work.
-            </p>
-
-            <ul>
-              <li>Docker setup and containerization support</li>
-              <li>CI/CD pipeline setup and improvements</li>
-              <li>Deployment automation</li>
-              <li>Release process cleanup and simplification</li>
-              <li>Troubleshooting unstable deployment workflows</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2 class="section-title">Examples of Problems I Can Help With</h2>
-
-        <div class="problem-grid">
-          <article class="entry">
-            <h3 class="entry-title">Too much manual work</h3>
-            <p class="muted">
-              Repetitive operational tasks in spreadsheets, dashboards, emails, reports, or internal systems that can be automated.
-            </p>
-          </article>
-
-          <article class="entry">
-            <h3 class="entry-title">Systems do not talk to each other</h3>
-            <p class="muted">
-              Need to connect APIs, move data between systems, or build a simple backend integration layer.
-            </p>
-          </article>
-
-          <article class="entry">
-            <h3 class="entry-title">No internal tooling</h3>
-            <p class="muted">
-              Need a small internal tool, admin interface, script, or backend utility to support an operational workflow.
-            </p>
-          </article>
-
-          <article class="entry">
-            <h3 class="entry-title">Deployments are fragile</h3>
-            <p class="muted">
-              Too many manual steps, unstable pipelines, slow releases, or unclear deployment processes.
-            </p>
-          </article>
-
-          <article class="entry">
-            <h3 class="entry-title">Operational complexity is growing</h3>
-            <p class="muted">
-              Need to simplify processes, reduce manual effort, and make systems easier to maintain.
-            </p>
-          </article>
-
-          <article class="entry">
-            <h3 class="entry-title">A small custom solution is needed</h3>
-            <p class="muted">
-              Need a lightweight Python-based service, integration, or internal tool instead of a heavy platform or full product team.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2 class="section-title">How I Usually Work</h2>
-
-        <div class="compact-steps">
-          <article class="entry">
-            <h3 class="entry-title">1. Problem discussion</h3>
-            <p class="muted">
-              You describe the workflow, issue, or bottleneck. I help define a practical scope and the simplest useful solution.
-            </p>
-          </article>
-
-          <article class="entry">
-            <h3 class="entry-title">2. Lightweight implementation</h3>
-            <p class="muted">
-              I focus on pragmatic, maintainable solutions: backend service, integration, internal tool, automation, or deployment improvement.
-            </p>
-          </article>
-
-          <article class="entry">
-            <h3 class="entry-title">3. Delivery and handoff</h3>
-            <p class="muted">
-              The goal is a working result that reduces manual work, improves reliability, or supports a specific business workflow.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2 class="section-title">Good Fit</h2>
-
-        <ul class="pill-list">
-          <li>Small teams</li>
-          <li>Startups</li>
-          <li>Internal tooling</li>
-          <li>Operational workflows</li>
-          <li>Python backend</li>
-          <li>API integrations</li>
-          <li>Workflow automation</li>
-          <li>Docker</li>
-          <li>CI/CD improvements</li>
-        </ul>
-      </section>
-
-      <section class="card cta-card">
-        <h2 class="section-title">Contact</h2>
-        <p>
-          If you need help with Python backend work, integrations, internal tools, workflow automation, or deployment-related improvements, feel free to reach out.
-        </p>
-        <div class="hero-links">
-          <a class="hero-link" href="mailto:aleksei.lutkov@gmail.com">aleksei.lutkov@gmail.com</a>
-          <a
-            class="hero-link"
-            href="https://www.linkedin.com/in/allut/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-          <div class="hero-link">Telegram @alekseilutkov</div>
-        </div>
-      </section>
     </div>
+  </nav>
 
-    <p class="footer-note">
-      Practical engineering help for Python backend, automation, integrations, and deployment reliability.
-    </p>
+  <main>
+  <header class="hero">
+    <div class="hero-photo">
+      <img src="portrait.jpg" alt="Portrait of Aleksei Lutkov" />
+    </div>
+    <div class="hero-content">
+      <h1>Aleksei Lutkov</h1>
+      <p class="hero-subtitle">Practical Python Services</p>
+      <ul class="hero-meta">
+        <li>Python Backend</li>
+        <li>Automation</li>
+        <li>Integrations</li>
+        <li>AI Tooling</li>
+        <li>CI/CD</li>
+        <li>Docker</li>
+        <li>Deployments</li>
+      </ul>
+      <div class="hero-links">
+        <a class="hero-link" href="mailto:aleksei.lutkov@gmail.com">aleksei.lutkov@gmail.com</a>
+        <a class="hero-link" href="https://www.linkedin.com/in/allut/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="stack">
+
+    <section class="card summary">
+      <p class="section-label">about</p>
+      <h2 class="section-title">About</h2>
+      <p>Hello, I'm Aleksei — Python Backend / Platform Engineer. I help businesses and small teams build practical backend solutions, automate workflows, connect systems, and improve operational reliability.</p>
+      <p>My main focus is Python backend development, internal tools, API integrations, and deployment-related improvements that reduce manual work and make systems easier to operate and maintain. I'm also an AI coding enthusiast — I build tools for AI-assisted development workflows and actively contribute to the Claude Code community.</p>
+    </section>
+
+    <section class="card">
+      <p class="section-label">services</p>
+      <h2 class="section-title">Main Services</h2>
+      <div class="offers-grid">
+
+        <article class="offer-card">
+          <h3 class="entry-title">Automation / Tooling / Backend Integrations</h3>
+          <p class="entry-subtitle">For businesses and teams that need practical Python solutions to reduce manual work, support internal workflows, and connect systems.</p>
+          <ul>
+            <li>Python backend work (FastAPI, Django, Flask)</li>
+            <li>Internal admin tools and small utility systems</li>
+            <li>Automations for repetitive operational tasks</li>
+            <li>API integrations between services and internal systems</li>
+            <li>Data processing and synchronization</li>
+            <li>Telegram bots and notification workflows</li>
+          </ul>
+        </article>
+
+        <article class="offer-card">
+          <h3 class="entry-title">CI/CD / Docker / Deployment Support</h3>
+          <p class="entry-subtitle">For teams that need more reliable deployments, cleaner release workflows, and less manual operational work.</p>
+          <ul>
+            <li>Docker setup and containerization support</li>
+            <li>CI/CD pipeline setup and improvements</li>
+            <li>Deployment automation</li>
+            <li>Release process cleanup and simplification</li>
+            <li>Troubleshooting unstable deployment workflows</li>
+          </ul>
+        </article>
+
+        <article class="offer-card">
+          <h3 class="entry-title">AI Tooling &amp; Automation</h3>
+          <p class="entry-subtitle">For teams that want to integrate AI into their development workflows or build internal tools powered by LLMs.</p>
+          <ul>
+            <li>AI workflow integration into existing tools</li>
+            <li>LLM-assisted internal tooling</li>
+            <li>Prompt engineering for internal use cases</li>
+            <li>Claude Code plugin development</li>
+            <li>Automation using LLM APIs</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="card">
+      <p class="section-label">problems</p>
+      <h2 class="section-title">Examples of Problems I Can Help With</h2>
+      <div class="problem-grid">
+
+        <article>
+          <h3 class="entry-title">Too much manual work</h3>
+          <p class="muted">Repetitive operational tasks in spreadsheets, dashboards, emails, reports, or internal systems that can be automated.</p>
+        </article>
+
+        <article>
+          <h3 class="entry-title">Systems do not talk to each other</h3>
+          <p class="muted">Need to connect APIs, move data between systems, or build a simple backend integration layer.</p>
+        </article>
+
+        <article>
+          <h3 class="entry-title">No internal tooling</h3>
+          <p class="muted">Need a small internal tool, admin interface, script, or backend utility to support an operational workflow.</p>
+        </article>
+
+        <article>
+          <h3 class="entry-title">Deployments are fragile</h3>
+          <p class="muted">Too many manual steps, unstable pipelines, slow releases, or unclear deployment processes.</p>
+        </article>
+
+        <article>
+          <h3 class="entry-title">Operational complexity is growing</h3>
+          <p class="muted">Need to simplify processes, reduce manual effort, and make systems easier to maintain.</p>
+        </article>
+
+        <article>
+          <h3 class="entry-title">A small custom solution is needed</h3>
+          <p class="muted">Need a lightweight Python-based service, integration, or internal tool instead of a heavy platform or full product team.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="card">
+      <p class="section-label">process</p>
+      <h2 class="section-title">How I Usually Work</h2>
+      <div class="compact-steps">
+
+        <article>
+          <h3 class="entry-title">1. Problem discussion</h3>
+          <p class="muted">You describe the workflow, issue, or bottleneck. I help define a practical scope and the simplest useful solution.</p>
+        </article>
+
+        <article>
+          <h3 class="entry-title">2. Implementation</h3>
+          <p class="muted">I focus on pragmatic, maintainable solutions: backend service, integration, internal tool, automation, or deployment improvement.</p>
+        </article>
+
+        <article>
+          <h3 class="entry-title">3. Delivery and handoff</h3>
+          <p class="muted">The goal is a working result that reduces manual work, improves reliability, or supports a specific business workflow.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="card">
+      <p class="section-label">fit</p>
+      <h2 class="section-title">Good Fit</h2>
+      <ul class="pill-list">
+        <li>Small teams</li>
+        <li>Startups</li>
+        <li>Internal tooling</li>
+        <li>Operational workflows</li>
+        <li>Python backend</li>
+        <li>API integrations</li>
+        <li>Workflow automation</li>
+        <li>Docker</li>
+        <li>CI/CD improvements</li>
+      </ul>
+    </section>
+
+    <section class="card cta-card">
+      <p class="section-label">contact</p>
+      <h2 class="section-title">Contact</h2>
+      <p style="color:var(--text-dim);font-size:0.9rem;margin-bottom:var(--space-md);">If you need help with Python backend work, integrations, internal tools, workflow automation, or deployment-related improvements, feel free to reach out.</p>
+      <div class="hero-links">
+        <a class="hero-link" href="mailto:aleksei.lutkov@gmail.com">aleksei.lutkov@gmail.com</a>
+        <a class="hero-link" href="https://www.linkedin.com/in/allut/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span class="hero-link">Telegram @alekseilutkov</span>
+      </div>
+    </section>
+
+  </div>
+
+  <p class="footer-note">Practical engineering help for Python backend, automation, integrations, and deployment reliability.</p>
   </main>
+
 </body>
 </html>

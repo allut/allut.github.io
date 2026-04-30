@@ -3,289 +3,66 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aleksei Lutkov | Python Backend / Platform Engineer</title>
-  <meta
-    name="description"
-    content="Aleksei Lutkov | Python Backend / Platform Engineer and Team Lead based in Tallinn, Estonia"
-  />
+  <title>Aleksei Lutkov</title>
+  <meta name="description" content="Aleksei Lutkov — Python Backend / Platform Engineer based in Tallinn, Estonia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="theme.js"></script>
 </head>
 <body>
-  <main class="page">
-    <header class="hero">
-      <div class="hero-photo">
-        <img src="portrait.jpg" alt="Portrait of Aleksei Lutkov" />
+
+  <nav class="site-nav">
+    <div class="site-nav__inner">
+      <span class="site-nav__brand">allut.github.io</span>
+      <div class="site-nav__links">
+        <a class="site-nav__link" href="index.html" aria-current="page">Home</a>
+        <a class="site-nav__link" href="cv.html">Profile</a>
+        <a class="site-nav__link" href="claude-anvil.html">claude-anvil</a>
+        <button class="theme-toggle" aria-label="Switch to light theme">
+          <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
       </div>
+    </div>
+  </nav>
 
-      <div class="hero-content">
-        <h1>Aleksei Lutkov</h1>
-        <p class="hero-subtitle">Python Backend / Platform Engineer | Team Lead</p>
-        <p class="hero-subtitle">Tallinn, Estonia</p>
+  <main>
+  <section class="hero--landing">
+    <p class="hero__eyebrow">// Python · AI Tooling · Tallinn</p>
+    <h1 class="hero__name">Aleksei Lutkov</h1>
+    <p class="hero__tagline">Backend engineer who builds reliable systems, tames operational complexity, and ships things that stay shipped.</p>
 
-        <ul class="hero-meta">
-          <li>Backend Development</li>
-          <li>Platform Engineering</li>
-          <li>Production Reliability</li>
-        </ul>
-
-        <div class="hero-links">
-          <a class="hero-link" href="mailto:aleksei.lutkov@gmail.com">aleksei.lutkov@gmail.com</a>
-          <a
-            class="hero-link"
-            href="https://www.linkedin.com/in/allut/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-        </div>
-      </div>
-    </header>
-
-    <div class="stack">
-      <section class="card summary">
-        <h2 class="section-title">Summary</h2>
-        <p>
-          Python Software Engineer and Team Lead with strong experience in backend development, platform operations, and DevOps practices. Currently working as a Team Lead Platform Operations at Relax Gaming.
-        </p>
-        <p>
-          Focused on system reliability, deployment automation, distributed systems, and B2B integrations. Interested in backend, platform engineering, and engineering leadership roles where I can improve reliability and deliver business impact.
-        </p>
-      </section>
-
-      <section class="card">
-        <h2 class="section-title">Core Skills</h2>
-
-        <div class="skills-grid skills-grid--wide">
-          <div class="skill-group">
-            <h3>Backend</h3>
-            <ul>
-              <li>Python (FastAPI, aiohttp, Django, Flask)</li>
-              <li>Backend development</li>
-              <li>API design</li>
-            </ul>
-          </div>
-
-          <div class="skill-group">
-            <h3>Infrastructure</h3>
-            <ul>
-              <li>CI/CD (Jenkins, Ansible, pipelines)</li>
-              <li>Docker</li>
-              <li>Containerization</li>
-            </ul>
-          </div>
-
-          <div class="skill-group">
-            <h3>Other</h3>
-            <ul>
-              <li>Troubleshooting production systems</li>
-              <li>Integrations & automation</li>
-              <li>Operations & process management</li>
-              <li>Team leadership & mentoring</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2 class="section-title">Experience</h2>
-
-        <div class="experience-list">
-          <article class="entry">
-            <div class="entry-header">
-              <h3 class="entry-title">Team Lead Platform Operations</h3>
-              <div class="entry-date">Jan 2025 — Present</div>
-            </div>
-            <p class="entry-subtitle">Relax Gaming Ltd</p>
-            <ul>
-              <li>Led the Platform Operations team responsible for game deployments and releases, casino and Platform-to-Platform integrations, and configuration changes, improving reliability of operational tasks and processes.</li>
-              <li>Supervised and oversaw professional development and training of Software Engineers in the Platform Operations team, enhancing team capability, technical expertise, and ownership of platform operations.</li>
-              <li>Streamlined operational processes and reduced complexity, making them more structured, predictable, and easier to maintain.</li>
-              <li>Developed backend services in Python for distributed systems, enabling reliable platform operations, and supporting business-critical workflows.</li>
-              <li>Improved and maintained CI/CD pipelines, reducing manual work and increasing deployment stability.</li>
-              <li>Investigated and resolved production issues, improving system reliability and reducing downtime in production environments.</li>
-            </ul>
-          </article>
-
-          <article class="entry">
-            <div class="entry-header">
-              <h3 class="entry-title">Software Engineer</h3>
-              <div class="entry-date">Apr 2021 — Jan 2025</div>
-            </div>
-            <p class="entry-subtitle">Relax Gaming Ltd</p>
-            <ul>
-              <li>Developed backend services in Python for distributed systems, enabling reliable platform operations and supporting business-critical workflows.</li>
-              <li>Improved and maintained CI/CD pipelines, reducing manual work and increasing deployment stability.</li>
-              <li>Performed casino integrations, configuration changes, and other operational tasks, ensuring stable and reliable platform operations.</li>
-              <li>Managed game deployments and releases, supporting business-critical game release workflows.</li>
-              <li>Curated, consulted, and tested Platform-to-Platform integrations, facilitating business expansion.</li>
-              <li>Investigated and resolved production issues, improving system reliability and reducing downtime in production environments.</li>
-              <li>Mentored junior engineers, increasing team knowledge and accelerating the onboarding process.</li>
-            </ul>
-          </article>
-
-          <article class="entry">
-            <div class="entry-header">
-              <h3 class="entry-title">Head of Partner Support Engineering</h3>
-              <div class="entry-date">Feb 2021 — Apr 2021</div>
-            </div>
-            <p class="entry-subtitle">Relax Gaming Ltd</p>
-            <ul>
-              <li>Led the Partner Support Engineering team responsible for troubleshooting and resolving issues of Relax Gaming group's partners, improving support processes and supporting business-critical workflows.</li>
-              <li>Supervised and oversaw professional development and training of Partner Support Engineering team members, enhancing team capability, technical expertise, and support quality.</li>
-              <li>Ensured stable 24/7 Network Operations Center, enhancing monitoring and response processes.</li>
-              <li>Strengthened collaboration between internal teams and external partners, reducing communication gaps.</li>
-              <li>Improved support processes, making them more structured and efficient.</li>
-            </ul>
-          </article>
-
-          <article class="entry">
-            <div class="entry-header">
-              <h3 class="entry-title">Partner Support Engineer</h3>
-              <div class="entry-date">Sep 2020 — Feb 2021</div>
-            </div>
-            <p class="entry-subtitle">Relax Gaming Ltd</p>
-            <ul>
-              <li>Troubleshot and resolved issues of Relax Gaming group's partners, ensuring system stability and customer satisfaction.</li>
-              <li>Coordinated between internal teams and external partners to resolve issues of Relax Gaming group's partners.</li>
-              <li>Used internal platform tools, managing the Relax Gaming platform to support platform operations.</li>
-              <li>Participated in Network Operations Center work, ensuring system availability.</li>
-              <li>Contributed to improvements in support processes.</li>
-            </ul>
-          </article>
-
-          <article class="entry">
-            <div class="entry-header">
-              <h3 class="entry-title">Earlier Experience</h3>
-              <div class="entry-date">Jul 2018 — Sep 2020</div>
-            </div>
-            <ul>
-              <li>Conscript service at <strong>Headquarters and Signal Battalion</strong></li>
-              <li>(Senior) Customer Service Representative at <strong>Transcom Eesti OÜ</strong></li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2 class="section-title">Selected Projects / Impact</h2>
-
-        <div class="impact-list">
-          <article class="entry impact-item">
-            <h3>Backend Development</h3>
-            <h4>Building and maintaining backend systems</h4>
-            <p><strong>Problem:</strong> Need to integrate multiple internal and external systems with different APIs, data formats, and architecture.</p>
-            <p><strong>Action:</strong> Designed and developed backend services in Python, handling inter-system communication, complex data processing, and business-critical integration logic.</p>
-            <p><strong>Result:</strong> Stable and scalable backend systems enabling reliable operation and reducing operational issues.</p>
-          </article>
-
-          <article class="entry impact-item">
-            <h3>CI/CD</h3>
-            <h4>Improving deployment reliability</h4>
-            <p><strong>Problem:</strong> Deployment process for a key frontend system was ineffective and required manual intervention.</p>
-            <p><strong>Action:</strong> Improved CI/CD pipelines, automated key steps, and reduced manual operations.</p>
-            <p><strong>Result:</strong> Faster deployment process with fewer failures, faster testing, and more stable releases.</p>
-          </article>
-
-          <article class="entry impact-item">
-            <h3>Platform Operations</h3>
-            <h4>Managing Platform Operations</h4>
-            <p><strong>Problem:</strong> Need for better structured, defined, and automated operational tasks and processes, and clearer segregation of responsibilities.</p>
-            <p><strong>Action:</strong> Revised operational tasks, improved processes, rewrote and enriched documentation, and limited the area of responsibility.</p>
-            <p><strong>Result:</strong> Well-defined and documented operational tasks and processes, several fully automated tasks, and several delegated areas.</p>
-          </article>
-
-          <article class="entry impact-item">
-            <h3>P2P Integrations</h3>
-            <h4>Improving Platform-to-Platform integration process</h4>
-            <p><strong>Problem:</strong> Lack of clarity in the technical details of the Platform-to-Platform integration process and internal documentation.</p>
-            <p><strong>Action:</strong> Rewrote and enriched internal documentation, added step-by-step instructions, and created a comprehensive list of integration items, specifics, and applicable scope.</p>
-            <p><strong>Result:</strong> More streamlined Platform-to-Platform integration process, fewer delays, and faster integration times.</p>
-          </article>
-
-          <article class="entry impact-item">
-            <h3>Leadership</h3>
-            <h4>Leading Platform Operations team</h4>
-            <p><strong>Problem:</strong> Lack of visibility, continuous communication cycles, and clear development directions within the team.</p>
-            <p><strong>Action:</strong> Led the team, established continuous communication cycles, and defined development plans for team members.</p>
-            <p><strong>Result:</strong> Open and honest atmosphere, improved team efficiency, and clear development directions for each team member.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2 class="section-title">Education</h2>
-
-        <div class="education-list">
-          <article class="entry">
-            <div class="entry-header">
-              <h3 class="entry-title">Bachelor's degree, Informatics</h3>
-            </div>
-            <p class="entry-subtitle">Tallinn University of Technology (TalTech)</p>
-            <b>Graduation Thesis:</b> <a
-              class="thesis-link"
-              href="https://digikogu.taltech.ee/en/Download/bf3a9eb3-bd06-40d9-ba47-0b4a0e527f3c"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Integration and Optimization of Computer Vision Models for Fish Species, Size, and Behavior Classification in the Smart Fish Counter Application</span>
-            </a>
-            <p class="muted">Supervised by Jeffrey Andrew Tuhtan</p>
-          </article>
-        </div>
-      </section>
-
-      <!-- <section class="card">
-        <h2 class="section-title">Certificates</h2>
-
-        <ul class="compact-list">
-          <li>
-            <div class="compact-title">
-              <strong>Kubernetes Operators Intermediate</strong>
-              <span>Feb 2024</span>
-            </div>
-            <a href="https://courses.ibmdeveloper.skillsnetwork.site/certificates/0e3f982948ad4c2c8e760a6c1c46f2dd" target="_blank" rel="noopener noreferrer">IBM</a>
-          </li>
-
-          <li>
-            <div class="compact-title">
-              <strong>Getting started with Microservices with Istio and IBM Cloud Kubernetes Service</strong>
-              <span>Jan 2024</span>
-            </div>
-            <a href="https://courses.ibmdeveloper.skillsnetwork.site/certificates/05e82eefe97d45bda8a6a3f5a14470b9" target="_blank" rel="noopener noreferrer">IBM</a>
-          </li>
-
-          <li>
-            <div class="compact-title">
-              <strong>Docker Essentials: A Developer Introduction</strong>
-              <span>Jan 2024</span>
-            </div>
-            <a href="https://courses.ibmdeveloper.skillsnetwork.site/certificates/3961e0ef3847401a911e89838a05d11e" target="_blank" rel="noopener noreferrer">IBM</a>
-          </li>
-
-          <li>
-            <div class="compact-title">
-              <strong>Introduction to Containers, Kubernetes, and OpenShift V2</strong>
-              <span>Jun 2023</span>
-            </div>
-            <a href="https://courses.cognitiveclass.ai/certificates/fe635a13187d4ce8bf2c22aa7ee0bad1" target="_blank" rel="noopener noreferrer">IBM</a>
-          </li>
-        </ul>
-      </section> -->
-
-      <section class="card">
-        <h2 class="section-title">Languages</h2>
-        <ul class="pill-list">
-          <li>English — Professional</li>
-          <li>Estonian — Professional</li>
-          <li>Russian — Native</li>
-        </ul>
-      </section>
+    <div class="hero__nav-cards">
+      <a class="nav-card" href="cv.html">
+        <p class="nav-card__label">cv →</p>
+        <p class="nav-card__title">Profile</p>
+        <p class="nav-card__desc">Experience, skills, projects</p>
+      </a>
+      <a class="nav-card" href="claude-anvil.html">
+        <p class="nav-card__label">plugin →</p>
+        <p class="nav-card__title">claude-anvil</p>
+        <p class="nav-card__desc">Evidence-first code review</p>
+      </a>
     </div>
 
-    <p class="footer-note">
-      Built as a simple personal profile page and hosted on GitHub Pages.
+    <p class="hero__intro">
+      Python Software Engineer and Team Lead with a focus on backend development, platform operations, and deployment reliability.
+      Currently leading Platform Operations at Relax Gaming in Tallinn — building the systems and processes that keep games running.
     </p>
+    <p class="hero__intro">
+      I also build open-source tooling for AI-assisted development and contribute to the Claude Code ecosystem.
+    </p>
+
+    <div class="contact-row">
+      <a class="contact-link" href="mailto:aleksei.lutkov@gmail.com">aleksei.lutkov@gmail.com</a>
+      <a class="contact-link" href="https://www.linkedin.com/in/allut/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </section>
+
   </main>
+
 </body>
 </html>
