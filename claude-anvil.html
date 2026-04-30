@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>claude-anvil | Evidence-first code review for Claude Code</title>
+  <meta name="description" content="claude-anvil — evidence-first code review for Claude Code. Multi-model adversarial review, SQL-backed verification, and session memory." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="theme.js"></script>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="site-nav__inner">
+      <span class="site-nav__brand">allut.github.io</span>
+      <div class="site-nav__links">
+        <a class="site-nav__link" href="index.html">Home</a>
+        <a class="site-nav__link" href="cv.html">Profile</a>
+        <a class="site-nav__link" href="claude-anvil.html" aria-current="page">claude-anvil</a>
+        <button class="theme-toggle" aria-label="Switch to light theme">
+          <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+  <header class="hero--anvil">
+    <p class="plugin-name">claude-anvil</p>
+    <p class="hero__tagline">Evidence-first code review for Claude Code.</p>
+    <p class="hero__sub">A Claude Code plugin that verifies before presenting — attacking its own output with multiple AI models, recording every check in SQL, and refusing to show broken code.</p>
+    <p class="hero__credit">A port of <a href="https://github.com/burkeholland/anvil" target="_blank" rel="noopener noreferrer">burkeholland/anvil</a> for GitHub Copilot CLI by Burke Holland — ported and maintained for Claude Code by Aleksei Lutkov.</p>
+  </header>
+
+  <div class="stack">
+
+    <section class="card">
+      <p class="section-label">install</p>
+      <h2 class="section-title">Get Started</h2>
+      <p style="color:var(--text-dim);font-size:0.9rem;margin-bottom:var(--space-sm);">Install via the plugin marketplace, then run the setup wizard once to configure reviewers and API keys.</p>
+
+      <div class="terminal-box terminal-box--multi">
+        <div class="terminal-box__line">
+          <span class="terminal-box__prompt">/</span>
+          <span class="terminal-box__cmd">plugin marketplace add allut/claude-anvil</span>
+          <button class="terminal-box__copy" data-copy="/plugin marketplace add allut/claude-anvil" aria-label="Copy command">copy</button>
+        </div>
+        <div class="terminal-box__line">
+          <span class="terminal-box__prompt">/</span>
+          <span class="terminal-box__cmd">plugin install claude-anvil@allut-claude-anvil</span>
+          <button class="terminal-box__copy" data-copy="/plugin install claude-anvil@allut-claude-anvil" aria-label="Copy command">copy</button>
+        </div>
+        <div class="terminal-box__line">
+          <span class="terminal-box__prompt">/</span>
+          <span class="terminal-box__cmd">claude-anvil:anvil-setup</span>
+          <button class="terminal-box__copy" data-copy="/claude-anvil:anvil-setup" aria-label="Copy command">copy</button>
+        </div>
+      </div>
+
+      <p style="color:var(--text-dim);font-size:0.84rem;margin-top:var(--space-md);">Then invoke on any task:</p>
+      <div class="terminal-box terminal-box--block" style="margin-top:var(--space-xs);">
+        <span class="terminal-box__prompt">/</span>
+        <span class="terminal-box__cmd">anvil fix the login crash in auth/session.py</span>
+        <button class="terminal-box__copy" data-copy="/anvil fix the login crash in auth/session.py" aria-label="Copy command">copy</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <p class="section-label">the problem</p>
+      <h2 class="section-title">AI That Claims It Checked — but Didn't</h2>
+      <p style="color:var(--text-dim);font-size:0.92rem;line-height:1.7;">
+        Claude writes code, says "build passed ✅", and moves on — without running a single command.
+        You ship the PR. CI fails. The bug was obvious. The self-reported verification was fiction.
+        <br><br>
+        <code style="font-family:var(--font-mono);font-size:0.82rem;color:var(--accent)">claude-anvil</code> makes that impossible: every verification step is a tool call with an exit code, recorded in a SQLite ledger. No INSERT, no claim.
+      </p>
+    </section>
+
+    <section class="card">
+      <p class="section-label">what it does</p>
+      <h2 class="section-title">The Forge</h2>
+
+      <div class="feature-row">
+        <span class="feature-row__tag">multi-model</span>
+        <div>
+          <h3>Adversarial review by Claude, GPT-4o, Gemini, and Ollama</h3>
+          <p>After implementing, claude-anvil spawns up to three independent reviewers in parallel — different models, different blind spots. Findings get fixed before you see a line of code.</p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <span class="feature-row__tag">ledger</span>
+        <div>
+          <h3>SQL-backed verification ledger</h3>
+          <p>Every check — build exit codes, test results, linter output, reviewer verdicts — is INSERTed into <code style="font-family:var(--font-mono);font-size:0.82rem;color:var(--accent)">~/.claude-anvil/anvil.db</code>. The evidence bundle is a SELECT query, not prose.</p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <span class="feature-row__tag">verification</span>
+        <div>
+          <h3>Build / test / lint / IDE diagnostics — all tiers</h3>
+          <p>IDE diagnostics first, then the project's own build and test commands discovered dynamically from config files. If Tiers 1–2 yield no runtime signal, a Tier 3 smoke test runs instead.</p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <span class="feature-row__tag">baseline</span>
+        <div>
+          <h3>Baseline snapshots and regression detection</h3>
+          <p>State is captured before any edit. After implementation, regressions — checks that went green→red — are surfaced explicitly in the evidence bundle.</p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <span class="feature-row__tag">memory</span>
+        <div>
+          <h3>Session memory of past failures</h3>
+          <p>Lessons from previous sessions are recalled per-file before planning. If a past session touched this file and caused a regression, you'll know before a single line changes.</p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <span class="feature-row__tag">git</span>
+        <div>
+          <h3>Git automation — branch, stash, rollback</h3>
+          <p>Checks for dirty state and main-branch edits before starting. Creates a feature branch automatically for Medium and Large tasks. Commits after presenting with a structured message.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="card">
+      <p class="section-label">evidence</p>
+      <h2 class="section-title">What the Output Looks Like</h2>
+      <p style="color:var(--text-dim);font-size:0.84rem;margin-bottom:var(--space-sm);">Every Medium and Large task ends with a bundle pulled from SQL — not written by hand.</p>
+      <div class="evidence-table-wrap">
+        <table class="evidence-table">
+          <thead>
+            <tr>
+              <th>Phase</th>
+              <th>Check</th>
+              <th>Tool</th>
+              <th>Result</th>
+              <th>Detail</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>baseline</td>
+              <td>ide-diagnostics</td>
+              <td>mcp-ide</td>
+              <td><span class="badge badge--pass">pass</span></td>
+              <td>0 errors, 0 warnings</td>
+            </tr>
+            <tr>
+              <td>baseline</td>
+              <td>build</td>
+              <td>npm</td>
+              <td><span class="badge badge--pass">pass</span></td>
+              <td>exit 0</td>
+            </tr>
+            <tr>
+              <td>after</td>
+              <td>ide-diagnostics</td>
+              <td>mcp-ide</td>
+              <td><span class="badge badge--pass">pass</span></td>
+              <td>0 errors, 0 warnings</td>
+            </tr>
+            <tr>
+              <td>after</td>
+              <td>build</td>
+              <td>npm</td>
+              <td><span class="badge badge--pass">pass</span></td>
+              <td>exit 0</td>
+            </tr>
+            <tr>
+              <td>after</td>
+              <td>tests</td>
+              <td>pytest</td>
+              <td><span class="badge badge--pass">pass</span></td>
+              <td>47 passed in 3.2s</td>
+            </tr>
+            <tr>
+              <td>review</td>
+              <td>review-claude</td>
+              <td>anvil-review</td>
+              <td><span class="badge badge--pass">pass</span></td>
+              <td>No issues found</td>
+            </tr>
+            <tr>
+              <td>review</td>
+              <td>review-gemini</td>
+              <td>anvil-review</td>
+              <td><span class="badge badge--fail">fail</span></td>
+              <td>Missing null check — fixed before presenting</td>
+            </tr>
+            <tr>
+              <td>review</td>
+              <td>review-ollama</td>
+              <td>anvil-review</td>
+              <td><span class="badge badge--pass">pass</span></td>
+              <td>No issues found</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card cta-card">
+      <p class="section-label">source</p>
+      <h2 class="section-title">Open Source</h2>
+      <p style="color:var(--text-dim);font-size:0.9rem;margin-bottom:var(--space-md);">The plugin is open source. Contributions, issues, and feedback are welcome.</p>
+      <a class="contact-link" href="https://github.com/allut/claude-anvil" target="_blank" rel="noopener noreferrer">github.com/allut/claude-anvil →</a>
+    </section>
+
+  </div>
+
+  <p class="footer-note">claude-anvil — a Claude Code plugin by Aleksei Lutkov · Ported from <a href="https://github.com/burkeholland/anvil" target="_blank" rel="noopener noreferrer" style="color:var(--accent)">burkeholland/anvil</a> by Burke Holland</p>
+  </main>
+
+  <script>
+    document.querySelectorAll('.terminal-box__copy').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        navigator.clipboard.writeText(btn.dataset.copy).then(function() {
+          btn.textContent = '✓';
+          btn.classList.add('copied');
+          setTimeout(function() {
+            btn.textContent = 'copy';
+            btn.classList.remove('copied');
+          }, 1500);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
