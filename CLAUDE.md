@@ -16,6 +16,12 @@ Static personal website hosted on GitHub Pages (`allut.github.io`). No build ste
 - `theme.js` — inline script (loaded before `<body>`) that reads/writes `localStorage` and sets `data-theme` on `<html>` to avoid flash of wrong theme
 - `favicon.svg` — SVG favicon (dark rounded square with amber italic "AL")
 - `portrait.jpg` — profile photo used in the hero
+- `robots.txt` — crawler directives; points to `sitemap.xml`
+- `sitemap.xml` — lists all 4 pages for Google Search Console submission
+
+## SEO
+
+Each HTML page has canonical, OG, Twitter Card, and JSON-LD structured data tags in `<head>` (inserted after `<meta name="description">`). When adding a new page, add the same block and also add a `<url>` entry to `sitemap.xml`.
 
 ## Development
 
