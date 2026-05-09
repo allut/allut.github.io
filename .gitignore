@@ -28,3 +28,7 @@ yarn-error.log*
 # Temporary screenshots and check files
 *-check.png
 *-screenshot.png
+
+# Python cache
+__pycache__/
+*.pyc
